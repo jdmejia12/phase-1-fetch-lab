@@ -1,6 +1,8 @@
+const baseURL = ("https://anapioficeandfire.com/api/books")
 function fetchBooks() {
-  // To pass the tests, don't forget to return your fetch!
-  
+  return fetch(baseURL)
+  .then(result=>result.json())
+  .then(books =>renderBooks(books))
 }
 
 function renderBooks(books) {
